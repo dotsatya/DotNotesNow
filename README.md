@@ -4,6 +4,13 @@ A modern and minimal **Notes Application** built with **React.js** that allows u
  
 ---
 
+## 🚀 Live Demo
+
+🔗 **Vercel Deployment:**  
+👉 https://dotnotenow.vercel.app/
+
+---
+
 ## 🚀 Features
 
 ✅ Login System – Simple and clean login page  

@@ -1,16 +1,25 @@
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+// import { useNavigate } from "react-router-dom";
+import { use, useState } from "react";
 import AddSection from "../components/AddSection";
 import TasksSec from "../components/TasksSec";
 import { Moon, Sun } from "react-feather";
 import "../App.css";
 
-function Home() {
-  // নোট অ্যাপ
-  // नोट ऐप
-  // Note app
+const content = {
+  english: {
+    title: "Dot Note",
+    
+  },
+  bangla: {
+    title: "ডট নোট",
+  },
+  hindi: {
+    title: "डॉट नोट",
+  },
+}
 
-  const navigate = useNavigate();
+function Home() {
+  // const navigate = useNavigate();
 
   const [dark, setDark] = useState(false);
 
@@ -19,8 +28,9 @@ function Home() {
   const [tasks, setTasks] = useState([]);
   const [count, setCount] = useState(0);
 
-  const [edited, setEdited] = useState(null);
-
+  const [lang ,setLang]=useState("english");
+  // const [active, setActive] = useState(1);
+  
   const handleButton = (e) => {
     e.preventDefault();
 
@@ -38,18 +48,18 @@ function Home() {
       <main className="min-h-screen flex flex-col items-center bg-gray-100 dark:bg-slate-900 transition-colors">
         <header className="w-[90%] fixed p-4 flex items-center justify-between border-b border-slate-200  backdrop-blur-xl dark:border-slate-700">
           <h1 className="text-2xl font-bold text-slate-900 dark:text-white">
-            Dot Notes App
+            {content[lang] ? content[lang].title : "No lang"}
           </h1>
 
-          {/* <button className="border rounded-2xl p-2 hover:cursor-pointer">
-                        Bengali
-                    </button>
-                    <button className="border rounded-2xl p-2 hover:cursor-pointer">
-                        English 
-                    </button>
-                    <button className="border rounded-2xl p-2 hover:cursor-pointer">
-                        Hindi
-                    </button> */}
+          <button onClick={() => setLang("bangla")} className="border text-sm rounded-2xl p-2 hover:cursor-pointer dark:text-white">
+            Bengali
+          </button>
+          <button onClick={() => setLang("english")} className="border text-sm rounded-2xl p-2 hover:cursor-pointer dark:text-white">
+            English
+          </button>
+          <button onClick={() => setLang("hindi")} className="border text-sm rounded-2xl p-2 hover:cursor-pointer dark:text-white">
+            Hindi
+          </button>
 
           <button
             onClick={() => setDark(!dark)}

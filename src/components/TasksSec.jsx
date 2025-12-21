@@ -2,8 +2,6 @@ import React from "react";
 import { FaRegEdit } from "react-icons/fa";
 
 function TasksSec({ tasks, setTasks, handleEdit }) {
-
-
   return (
     <div>
       {tasks.length === 0 ? (
@@ -15,13 +13,13 @@ function TasksSec({ tasks, setTasks, handleEdit }) {
           {tasks.map((task) => (
             <div
               key={task.id}
-              className="bg-white dark:bg-slate-800 p-4 rounded-lg shadow mb-4 break-inside-avoid"
+              className="bg-white dark:bg-slate-800 p-4 rounded-lg shadow mb-4 break-inside-avoid inline-block w-full max-h-[500px] overflow-y-auto"
             >
-              <h3 className="text-lg break-words font-semibold text-slate-900 dark:text-slate-100">
+              <h3 className="text-lg wrap-break-word font-semibold text-slate-900 dark:text-slate-100">
                 {task.title}
               </h3>
 
-              <p className="text-sm break-words text-gray-600 dark:text-gray-300 mt-2">
+              <p className="text-sm wrap-break-word whitespace-pre-line text-gray-600 dark:text-gray-300 mt-2">
                 {task.details}
               </p>
 
@@ -32,7 +30,10 @@ function TasksSec({ tasks, setTasks, handleEdit }) {
                   className="px-2 py-1 rounded cursor-pointer bg-green-300 hover:bg-green-400 transition dark:bg-green-800 dark:hover:bg-green-700 "
                   title="Edit"
                 >
-                  <FaRegEdit size={22} className="text-white dark:text-gray-300" />
+                  <FaRegEdit
+                    size={22}
+                    className="text-white dark:text-gray-300"
+                  />
                 </button>
                 <button
                   onClick={() =>
