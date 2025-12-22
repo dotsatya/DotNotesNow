@@ -7,13 +7,13 @@ import "../App.css";
 
 const content = {
   english: {
-    title: "Dot Note",
+    title: "Dot Notes",
   },
   bengali: {
-    title: "ডট নোট",
+    title: "ডট নোটস",
   },
   hindi: {
-    title: "डॉट नोट",
+    title: "डॉट नोट्स",
   },
 };
 
@@ -66,8 +66,8 @@ function Home() {
   return (
     <div className={dark ? "" : "dark"}>
       <main className="min-h-screen flex flex-col items-center bg-gray-100 dark:bg-slate-900 transition-colors">
-        <header className="w-[90%] fixed p-4 flex items-center justify-between border-b border-slate-200  backdrop-blur-xl dark:border-slate-700">
-          <h1 className="text-2xl font-bold text-slate-900 dark:text-white">
+        <header className="w-[90%] fixed py-2 pb-3 flex items-center justify-between border-b border-slate-200  backdrop-blur-xl dark:border-slate-700">
+          <h1 className="text-3xl font-bold text-slate-900 dark:text-white">
             {content[lang] ? content[lang].title : "No lang"}
           </h1>
 
@@ -109,7 +109,7 @@ function Home() {
           </button>
         </header>
 
-        <section className="w-[80%] mt-20 p-6">
+        <section className="w-[80%] mt-16 p-6">
           <AddSection
             title={title}
             setTitle={setTitle}

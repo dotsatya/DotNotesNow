@@ -41,10 +41,10 @@ function AddSection({ handleButton, title, setTitle, details, setDetails, editId
           <form
             onSubmit={onSubmit}
             // onMouseDown={(e) => e.stopPropagation()}
-            className="  w-full max-w-2xl  rounded-b-2xl p-8  backdrop-blur-xl  bg-white/30 dark:bg-slate-900/40 border border-white/20 dark:border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
+            className="  w-full max-w-2xl  rounded-b-2xl p-8  backdrop-blur-xl  bg-white/60 dark:bg-slate-900/50 border border-white/20 dark:border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
           >
             {/* Header */}
-            <div className="flex justify-between items-center mb-6 border-b border-gray-400 dark:border-gray-200/10 pb-2">
+            <div className="flex justify-between items-center mb-6 border-b border-gray-400/40 dark:border-gray-200/10 pb-2">
               <h2 className="text-lg font-semibold tracking-wider text-gray-800 dark:text-gray-100">
                 {editId !== null ? "EDIT NOTE . . ." : "NOTE HERE . . ."}
               </h2>
