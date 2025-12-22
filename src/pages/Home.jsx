@@ -1,5 +1,6 @@
 // import { useNavigate } from "react-router-dom";
-import { use, useState } from "react";
+import { useState } from "react";
+import { MdOutlineEditNote } from "react-icons/md";
 import AddSection from "../components/AddSection";
 import TasksSec from "../components/TasksSec";
 import { Moon, Sun } from "react-feather";
@@ -67,9 +68,10 @@ function Home() {
     <div className={dark ? "" : "dark"}>
       <main className="min-h-screen flex flex-col items-center bg-gray-100 dark:bg-slate-900 transition-colors">
         <header className="w-[90%] fixed py-2 pb-3 flex items-center justify-between border-b border-slate-200  backdrop-blur-xl dark:border-slate-700">
+         <div className="flex flex-row items-center gap-1 text-gray-800 dark:text-gray-200"> <MdOutlineEditNote size={32} />
           <h1 className="text-3xl font-bold text-slate-900 dark:text-white">
             {content[lang] ? content[lang].title : "No lang"}
-          </h1>
+          </h1></div>
 
           <div className="flex flex-row gap-2 text-gray-600">
             <button
