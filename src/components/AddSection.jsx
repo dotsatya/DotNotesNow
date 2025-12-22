@@ -51,7 +51,7 @@ function AddSection({ handleButton, title, setTitle, details, setDetails, editId
 
               <button
                 type="button"
-                onClick={() => {setExpanded(false), setEditId(null), setTitle(""), setDetails("")} }
+                onClick={() => {setExpanded(false)} }
                 className="text-gray-500 dark:text-gray-400 hover:text-indigo-500 transition"
               >
                 {editId !== null ? "" : "Close"}
