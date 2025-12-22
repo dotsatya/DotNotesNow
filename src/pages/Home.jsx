@@ -8,15 +8,14 @@ import "../App.css";
 const content = {
   english: {
     title: "Dot Note",
-    
   },
-  bangla: {
+  bengali: {
     title: "ডট নোট",
   },
   hindi: {
     title: "डॉट नोट",
   },
-}
+};
 
 function Home() {
   // const navigate = useNavigate();
@@ -28,20 +27,41 @@ function Home() {
   const [tasks, setTasks] = useState([]);
   const [count, setCount] = useState(0);
 
-  const [lang ,setLang]=useState("english");
-  // const [active, setActive] = useState(1);
-  
+  const [expanded, setExpanded] = useState(false);
+
+  const [lang, setLang] = useState("english");
+  const [editId, setEditId] = useState(null);
+
   const handleButton = (e) => {
     e.preventDefault();
 
-    setCount((count) => count + 1);
-    setTasks([...tasks, { id: count, title, details }]);
-
+    if (editId !== null) {
+      setTasks(
+        tasks.map((task) => {
+          if (task.id === editId) {
+            return { ...task, title, details };
+          }
+          return task;
+        })
+      );
+      setEditId(null);
+    } else {
+      setTasks([...tasks, { id: count, title, details }]);
+      setCount((count) => count + 1);
+    }
     setTitle("");
     setDetails("");
   };
 
-  const handleEdit = (id) => {};
+  const handleEdit = (id) => {
+    const taskNote = tasks.find((t) => t.id === id);
+    if (!taskNote) return;
+
+    setTitle(taskNote.title);
+    setDetails(taskNote.details);
+    setEditId(id);
+    setExpanded(true);
+  };
 
   return (
     <div className={dark ? "" : "dark"}>
@@ -51,16 +71,26 @@ function Home() {
             {content[lang] ? content[lang].title : "No lang"}
           </h1>
 
-          <button onClick={() => setLang("bangla")} className="border text-sm rounded-2xl p-2 hover:cursor-pointer dark:text-white">
-            Bengali
-          </button>
-          <button onClick={() => setLang("english")} className="border text-sm rounded-2xl p-2 hover:cursor-pointer dark:text-white">
-            English
-          </button>
-          <button onClick={() => setLang("hindi")} className="border text-sm rounded-2xl p-2 hover:cursor-pointer dark:text-white">
-            Hindi
-          </button>
-
+          <div className="flex flex-row gap-2 text-gray-600">
+            <button
+              onClick={() => setLang("bengali")}
+              className="border-b border-gray-400 text-sm rounded-lg p-2 hover:cursor-pointer dark:text-white"
+            >
+              <h6 className="text-gray-500  hover:text-gray-300">Bengali</h6>
+            </button>
+            <button
+              onClick={() => setLang("english")}
+              className="border-b border-gray-400 text-sm rounded-lg p-2 hover:cursor-pointer dark:text-white"
+            >
+              <h6 className="text-gray-500  hover:text-gray-300">English</h6>
+            </button>
+            <button
+              onClick={() => setLang("hindi")}
+              className="border-b border-gray-400 text-sm rounded-lg p-2 hover:cursor-pointer dark:text-white"
+            >
+              <h6 className="text-gray-500  hover:text-gray-300">Hindi</h6>
+            </button>
+          </div>
           <button
             onClick={() => setDark(!dark)}
             className="relative flex items-center justify-center w-10 h-10 rounded-full cursor-pointer bg-white dark:bg-slate-800 border border-gray-300 dark:border-slate-700 shadow-sm hover:shadow-md transition-all duration-300 active:scale-95"
@@ -73,7 +103,7 @@ function Home() {
             ) : (
               <Moon
                 size={18}
-                className="text-slate-800 dark:text-white transition-transform duration-300"
+                className="text-yellow-400 transition-transform duration-300"
               />
             )}
           </button>
@@ -86,6 +116,10 @@ function Home() {
             details={details}
             setDetails={setDetails}
             handleButton={handleButton}
+            editId={editId}
+            setEditId={setEditId}
+            expanded={expanded}
+            setExpanded={setExpanded}
           />
 
           <TasksSec tasks={tasks} setTasks={setTasks} handleEdit={handleEdit} />

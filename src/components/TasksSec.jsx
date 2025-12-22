@@ -13,9 +13,9 @@ function TasksSec({ tasks, setTasks, handleEdit }) {
           {tasks.map((task) => (
             <div
               key={task.id}
-              className="bg-white dark:bg-slate-800 p-4 rounded-lg shadow mb-4 break-inside-avoid inline-block w-full max-h-[500px] overflow-y-auto"
+              className="bg-white dark:bg-slate-800 p-4 rounded-lg shadow mb-4 break-inside-avoid inline-block w-full max-h-125 overflow-y-auto"
             >
-              <h3 className="text-lg wrap-break-word font-semibold text-slate-900 dark:text-slate-100">
+              <h3 className="pb-1 text-lg wrap-break-word font-semibold border-b border-gray-300 dark:border-gray-700 text-slate-900 dark:text-slate-100">
                 {task.title}
               </h3>
 
@@ -26,7 +26,7 @@ function TasksSec({ tasks, setTasks, handleEdit }) {
               <div className="flex items-center justify-end gap-3 mt-4">
                 {/* Edit */}
                 <button
-                  // onClick={() => handleEdit(task.id) }
+                  onClick={() => handleEdit(task.id)}
                   className="px-2 py-1 rounded cursor-pointer bg-green-300 hover:bg-green-400 transition dark:bg-green-800 dark:hover:bg-green-700 "
                   title="Edit"
                 >
@@ -37,7 +37,7 @@ function TasksSec({ tasks, setTasks, handleEdit }) {
                 </button>
                 <button
                   onClick={() =>
-                    setTasks(tasks.filter((t) => t.id !== task.id))
+                    setTasks((tasks) => tasks.filter((t) => t.id !== task.id))
                   }
                   className="inline-flex items-center px-3 py-1.5 bg-red-50 text-red-600 rounded cursor-pointer hover:bg-red-100 transition dark:bg-red-900/20 dark:text-red-300 dark:hover:bg-red-900/30"
                 >
