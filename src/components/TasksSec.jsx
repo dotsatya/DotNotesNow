@@ -1,7 +1,7 @@
 import React from "react";
 import { FaRegEdit } from "react-icons/fa";
 
-function TasksSec({ tasks, setTasks, handleEdit }) {
+function TasksSec({ tasks, setTasks, handleEdit, handleDelete }) {
   return (
     <div>
       {tasks.length === 0 ? (
@@ -36,9 +36,7 @@ function TasksSec({ tasks, setTasks, handleEdit }) {
                   />
                 </button>
                 <button
-                  onClick={() =>
-                    setTasks((tasks) => tasks.filter((t) => t.id !== task.id))
-                  }
+                  onClick={() => handleDelete(task.id)}
                   className="inline-flex items-center px-3 py-1.5 bg-red-50 text-red-600 rounded cursor-pointer hover:bg-red-100 transition dark:bg-red-900/20 dark:text-red-300 dark:hover:bg-red-900/30"
                 >
                   Delete

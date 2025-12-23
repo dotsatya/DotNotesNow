@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import api from "../api";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -17,7 +18,19 @@ const Login = () => {
     if (!form.email || !form.password) return;
 
     // fake logIn success
-    navigate("/home");
+    // navigate("/home");
+    api.post("/login", form)
+      .then(res => {
+        localStorage.setItem("token", res.data.token);
+        navigate("/");
+      })
+      .catch((err) => {
+        if (!err.response) {
+          alert("Server unreachable. Make sure backend is running: cd backend && npm start");
+        } else {
+          alert(err.response.data?.error || "Invalid login");
+        }
+      });
   };
 
   return (

@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import api from "../api";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -18,12 +19,24 @@ const Signup = () => {
     if (!form.name || !form.email || !form.password) return;
 
     // fake signup success
-    navigate("/");
+    // navigate("/");
+    api.post("/signup", form)
+      .then(() => {
+        alert("Signup successful");
+        navigate("/");
+      })
+      .catch((err) => {
+        if (!err.response) {
+          alert("Server unreachable. Make sure the backend is running: cd backend && npm start");
+        } else {
+          alert(err.response.data?.error || "Signup failed");
+        }
+      });
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-black px-4">
-      
+
       <form
         onSubmit={handleSignup}
         className="w-full max-w-md bg-white/10 backdrop-blur-xl border border-white/20 p-8 rounded-2xl shadow-2xl"
