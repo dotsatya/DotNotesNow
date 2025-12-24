@@ -38,13 +38,15 @@ Note_App/
 │
 ├── src/
 │   ├── components/
-│   │   ├── Login.jsx
-│   │   ├── Notes.jsx
+│   │   ├── NotesAddSection.jsx
+│   │   ├── NotesDisplay.jsx
 │   │   ├── ThemeToggle.jsx
 │   │
 │   ├── pages/
 │   │   ├── LoginPage.jsx
+│   │   ├── SignupPage.jsx
 │   │   ├── HomePage.jsx
+│   │   ├── NotFound404.jsx
 │   │
 │   ├── App.jsx
 │   ├── main.jsx
